@@ -1,0 +1,8 @@
+Flask
+requests
+firebase-admin
+pycryptodome
+opencv-python
+numpy
+scipy
+insightface
