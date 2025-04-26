@@ -9,11 +9,18 @@ from insightface.app import FaceAnalysis
 from scipy.spatial.distance import cosine
 import firebase_admin
 from firebase_admin import credentials, firestore
+import os
+import json
+import firebase_admin
+
 
 app = Flask(__name__)
 
 # Firebase initialization
-cred = credentials.Certificate("C:\\Users\\dell\\loksabha-firestore-upload\\serviceAccountKey.json")
+firebase_json = os.environ.get("FIREBASE_CREDENTIAL_JSON")
+cred_dict = json.loads(firebase_json)
+cred = credentials.Certificate(cred_dict)
+
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
