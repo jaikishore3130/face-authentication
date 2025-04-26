@@ -1,9 +1,6 @@
-Flask
-requests
-firebase-admin
-pycryptodome
-opencv-python
+flask
 numpy
-scipy
+opencv-python
 insightface
+scipy
 onnxruntime
